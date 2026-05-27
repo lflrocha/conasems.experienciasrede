@@ -6,6 +6,12 @@
   <configure zcml:condition="installed AccessControl.security">
   <!-- -*- extra stuff goes here -*- -->
 
+    <permission
+        id="conasems.experienciasrede.AddTrabalho"
+        title="conasems.experienciasrede: Add Trabalho"
+    />
+
+
 
   </configure>
 
