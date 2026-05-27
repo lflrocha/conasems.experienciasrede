@@ -1,0 +1,6 @@
+[report]
+include =
+    src/conasems/*
+omit =
+    */test*
+    */upgrades/*
