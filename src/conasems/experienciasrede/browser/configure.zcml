@@ -12,9 +12,25 @@
       />
 
   <!-- Publish static files -->
-  <plone:static
-      name="conasems.experienciasrede"
-      type="plone"
+
+  <browser:page
+      name="trabalhos-selecionados"
+      for="*"
+      class=".browser.TrabalhosSelecionadosView"
+      template="templates/trabalhos-selecionados.pt"
+      permission="zope2.View"
+      />
+
+  <browser:page
+      name="trabalho-view"
+      for="*"
+      class=".browser.TrabalhoView"
+      template="templates/trabalho-view.pt"
+      permission="zope2.View"
+      />
+
+  <browser:resourceDirectory
+      name="experiencias-rede"
       directory="static"
       />
 

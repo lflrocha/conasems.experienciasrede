@@ -1,0 +1,115 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal">
+
+      <head>
+        <meta charset="utf-8" />
+        <title tal:content="context/Title">Título</title>
+
+        <link rel="stylesheet"
+              tal:attributes="href string:${view/static_url}/experiencias.css" />
+
+      </head>
+
+<body>
+
+
+  <header class="experiencias-topbar">
+    <div class="experiencias-topbar-inner">
+      <div class="experiencias-logo">
+        <img tal:attributes="src string:${view/static_url}/logo.png"
+             alt="Logo Rede Colaborativa COSEMS" />
+      </div>
+
+      <div class="experiencias-evento">
+        Experiências que transformam:<br />
+        uma rede em movimento
+      </div>
+    </div>
+  </header>
+
+  <section class="experiencias-hero">
+    <div class="experiencias-hero-inner">
+      <h1>Trabalhos selecionados</h1>
+      <p>Conheça experiências que fortalecem a gestão, o cuidado e a Educação Permanente em Saúde nos territórios.</p>
+    </div>
+  </section>
+
+  <main class="experiencias-wrap">
+    <section class="experiencias-filters">
+      <div class="experiencias-search-row">
+        <input type="search"
+               id="experienciasSearchInput"
+               placeholder="Buscar por título, autor, COSEMS ou palavra-chave..." />
+
+        <select id="experienciasUfSelect">
+          <option value="">Todos os COSEMS</option>
+          <tal:uf repeat="uf view/cosems_options">
+            <option tal:attributes="value uf"
+                    tal:content="string:${uf}">COSEMS-UF</option>
+          </tal:uf>
+        </select>
+      </div>
+
+      <div class="experiencias-chips" id="experienciasAxisChips">
+        <button type="button" class="experiencias-chip active" data-axis="">Todos os eixos</button>
+        <tal:axis repeat="axis view/axis_options">
+          <button type="button"
+                  class="experiencias-chip"
+                  tal:attributes="data-axis axis"
+                  tal:content="axis">Eixo</button>
+        </tal:axis>
+      </div>
+    </section>
+
+    <div class="experiencias-summary">
+      <div id="experienciasResultCount">0 trabalhos encontrados</div>
+      <div>Toque em um card para acessar o trabalho completo</div>
+    </div>
+
+    <section class="experiencias-grid" id="experienciasCardsGrid">
+      <article class="experiencias-card"
+               tal:repeat="item view/trabalhos"
+               tal:attributes="data-title item/title;
+                               data-author item/author;
+                               data-uf item/uf;
+                               data-axis item/axis">
+        <div class="experiencias-card-top">
+          <div class="experiencias-uf" tal:content="item/uf">UF</div>
+          <div class="experiencias-id" tal:content="item/id">ID 001</div>
+        </div>
+
+        <div class="experiencias-card-body">
+          <div class="experiencias-axis" tal:content="item/axis">Eixo temático</div>
+
+          <h2 tal:content="item/title">Título do trabalho</h2>
+
+          <div class="experiencias-author">
+            <strong tal:content="item/author">Autor</strong>
+            <span tal:condition="item/funcao" tal:content="item/funcao">Função</span>
+            <span tal:condition="item/funcao"> · </span>
+            <span tal:content="string:${item/uf}">COSEMS-UF</span>
+          </div>
+
+          <a class="experiencias-card-link"
+             tal:attributes="href item/url">Ver trabalho</a>
+        </div>
+      </article>
+    </section>
+
+    <div class="experiencias-empty" id="experienciasEmptyState">
+      Nenhum trabalho encontrado com os filtros selecionados.
+    </div>
+  </main>
+
+  <footer class="experiencias-footer">
+    <img tal:attributes="src string:${view/static_url}/barra-logos.png"
+         alt="Logos institucionais"
+         class="experiencias-footer-logos" />
+  </footer>
+
+  <script tal:attributes="src string:${view/static_url}/experiencias.js"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,147 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal">
+
+      <head>
+        <meta charset="utf-8" />
+        <title tal:content="context/Title">Título</title>
+
+        <link rel="stylesheet"
+              tal:attributes="href string:${view/static_url}/trabalho.css" />
+
+      </head>
+
+
+<body>
+
+
+  <header class="experiencias-detail-topbar">
+    <div class="experiencias-detail-topbar-inner">
+      <div class="experiencias-detail-logo">
+        <img tal:attributes="src string:${view/static_url}/logo.png"
+             alt="Logo Rede Colaborativa COSEMS" />
+      </div>
+
+      <div class="experiencias-detail-evento">
+        Experiências que transformam:<br />
+        uma rede em movimento
+      </div>
+    </div>
+  </header>
+
+  <main class="experiencias-detail-main">
+    <section class="experiencias-detail-hero" id="topo">
+      <div class="experiencias-detail-hero-inner">
+        <div class="experiencias-detail-tag"
+             tal:content="string:${view/eixo_tematico}">
+          COSEMS-UF · Eixo temático
+        </div>
+
+        <h1 tal:content="context/Title">Título do trabalho</h1>
+
+        <div class="experiencias-detail-meta">
+
+            <div class="experiencias-autor">
+                <strong>Autor:</strong>
+
+                <span tal:condition="view/autor"
+                      tal:content="view/autor">Autor</span>
+
+                <tal:sep1 tal:condition="view/funcao_autor">
+                    <span> | </span>
+                    <span tal:content="view/funcao_autor">Função</span>
+                </tal:sep1>
+
+                <tal:sep2 tal:condition="view/cosems">
+                    <span> | </span>
+                    <span tal:content="view/cosems">COSEMS</span>
+                </tal:sep2>
+            </div>
+
+            <div class="experiencias-coautor"
+                 tal:condition="view/coautor">
+                <strong>Coautor(es):</strong>
+                <span tal:content="view/coautor">Nome do coautor</span>
+            </div>
+
+            <div class="experiencias-id"
+                 tal:condition="view/identificador">
+                <strong>ID:</strong>
+                <span tal:content="view/identificador">001</span>
+            </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <div class="experiencias-detail-page">
+      <aside class="experiencias-detail-nav">
+        <div class="experiencias-detail-nav-title">Navegue pelo trabalho</div>
+        <a href="#introducao" tal:condition="view/introducao">Introdução</a>
+        <a href="#objetivos" tal:condition="view/objetivos">Objetivos</a>
+        <a href="#metodologia" tal:condition="view/metodologia">Metodologia</a>
+        <a href="#resultados" tal:condition="view/resultados">Resultados</a>
+        <a href="#consideracoes" tal:condition="view/consideracoes_finais">Considerações finais</a>
+        <a href="#referencias" tal:condition="view/referencias">Referências</a>
+        <a href="#contato" tal:condition="view/contato">Contato</a>
+      </aside>
+
+      <article class="experiencias-detail-content">
+
+        <section id="introducao" class="experiencias-detail-section" tal:condition="view/introducao">
+          <h2>Introdução</h2>
+          <div tal:replace="structure view/introducao_html">Introdução</div>
+        </section>
+
+        <section id="objetivos" class="experiencias-detail-section" tal:condition="view/objetivos">
+          <h2>Objetivos</h2>
+          <div tal:replace="structure view/objetivos_html">Objetivos</div>
+        </section>
+
+        <section id="metodologia" class="experiencias-detail-section" tal:condition="view/metodologia">
+          <h2>Metodologia</h2>
+          <div tal:replace="structure view/metodologia_html">Metodologia</div>
+        </section>
+
+        <section id="resultados" class="experiencias-detail-section" tal:condition="view/resultados">
+          <h2>Resultados e discussão</h2>
+          <div tal:replace="structure view/resultados_html">Resultados</div>
+        </section>
+
+        <section id="consideracoes" class="experiencias-detail-section" tal:condition="view/consideracoes_finais">
+          <h2>Considerações finais</h2>
+          <div tal:replace="structure view/consideracoes_finais_html">Considerações</div>
+        </section>
+
+        <section id="referencias" class="experiencias-detail-section" tal:condition="view/referencias">
+          <h2>Referências</h2>
+          <div tal:replace="structure view/referencias_html">Referências</div>
+        </section>
+
+        <section id="contato" class="experiencias-detail-section" tal:condition="view/contato">
+          <h2>Contato</h2>
+          <div tal:replace="structure view/contato_html">Contato</div>
+        </section>
+
+      </article>
+    </div>
+  </main>
+
+  <a tal:attributes="href view/back_url"
+     class="experiencias-detail-floating-back">← Voltar</a>
+
+  <footer class="experiencias-detail-footer">
+    <img tal:attributes="src string:${view/static_url}/barra-logos.png"
+         alt="Logos institucionais"
+         class="experiencias-detail-footer-logos" />
+  </footer>
+
+  <button type="button" class="experiencias-detail-btn-top" id="experienciasDetailBtnTop">
+    ↑ Topo
+  </button>
+
+  <script tal:attributes="src string:${view/static_url}/trabalho.js"></script>
+
+</body>
+</html>

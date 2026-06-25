@@ -1,0 +1,310 @@
+:root {
+  --experiencias-azul: #2828a8;
+  --experiencias-azul-escuro: #16166f;
+  --experiencias-amarelo: #f7c600;
+  --experiencias-branco: #ffffff;
+  --experiencias-cinza: #f5f6fa;
+  --experiencias-texto: #202124;
+  --experiencias-texto-suave: #5f6368;
+  --experiencias-borda: #e4e6ef;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0px;
+}
+
+.experiencias-detail-topbar,
+.experiencias-detail-topbar *,
+.experiencias-detail-main,
+.experiencias-detail-main *,
+.experiencias-detail-footer,
+.experiencias-detail-footer *,
+.experiencias-detail-floating-back,
+.experiencias-detail-btn-top {
+  box-sizing: border-box;
+}
+
+.experiencias-detail-topbar {
+  background: var(--experiencias-azul);
+  color: #fff;
+  padding: 28px 48px 22px;
+  border-bottom: 8px solid var(--experiencias-amarelo);
+}
+
+.experiencias-detail-topbar-inner {
+  max-width: 1180px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 32px;
+}
+
+.experiencias-detail-logo img {
+  height: 90px;
+  width: auto;
+  display: block;
+}
+
+.experiencias-detail-evento {
+  text-align: right;
+  font-weight: 800;
+  font-size: 24px;
+  text-transform: uppercase;
+  line-height: 1.05;
+}
+
+.experiencias-detail-main {
+  background: var(--experiencias-cinza);
+  color: var(--experiencias-texto);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.experiencias-detail-hero {
+  background: linear-gradient(135deg, var(--experiencias-azul), var(--experiencias-azul-escuro));
+  color: #fff;
+  padding: 54px 48px;
+}
+
+.experiencias-detail-hero-inner {
+  max-width: 1180px;
+  margin: auto;
+}
+
+.experiencias-detail-tag {
+  display: inline-block;
+  background: var(--experiencias-amarelo);
+  color: #1b1b1b;
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+.experiencias-detail-hero h1 {
+  max-width: 980px;
+  margin: 0;
+  font-size: clamp(26px, 3.5vw, 48px);
+  line-height: 1.15;
+  letter-spacing: -0.2px;
+}
+
+.experiencias-detail-meta {
+  margin-top: 28px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  font-size: 18px;
+  color: #eef0ff;
+}
+
+.experiencias-detail-meta span {
+  padding-right: 14px;
+}
+
+.experiencias-detail-meta span:last-child {
+  border-right: none;
+}
+
+.experiencias-detail-page {
+  max-width: 1180px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 250px minmax(0, 1fr);
+  gap: 48px;
+  padding: 48px;
+}
+
+.experiencias-detail-nav {
+  position: sticky;
+  top: 24px;
+  align-self: start;
+  background: #fff;
+  border: 1px solid var(--experiencias-borda);
+  border-radius: 20px;
+  padding: 22px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.06);
+}
+
+.experiencias-detail-nav-title {
+  font-size: 13px;
+  font-weight: 800;
+  color: var(--experiencias-texto-suave);
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.experiencias-detail-nav a {
+  display: block;
+  color: var(--experiencias-texto);
+  text-decoration: none;
+  font-weight: 700;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--experiencias-borda);
+}
+
+.experiencias-detail-nav a:last-child {
+  border-bottom: none;
+}
+
+.experiencias-detail-content {
+  background: #fff;
+  border-radius: 24px;
+  padding: 52px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.06);
+}
+
+.experiencias-detail-section {
+  padding-bottom: 44px;
+  margin-bottom: 44px;
+  border-bottom: 1px solid var(--experiencias-borda);
+}
+
+.experiencias-detail-section:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.experiencias-detail-section h2 {
+  margin: 0 0 20px;
+  font-size: 34px;
+  letter-spacing: -0.8px;
+  color: var(--experiencias-azul-escuro);
+}
+
+.experiencias-detail-section p,
+.experiencias-detail-section li {
+  font-size: 20px;
+  line-height: 1.65;
+}
+
+.experiencias-detail-section p {
+  margin: 0 0 22px;
+}
+
+.experiencias-detail-section ul,
+.experiencias-detail-section ol {
+  margin: 0 0 22px 24px;
+}
+
+.experiencias-detail-highlight,
+.experiencias-detail-section blockquote {
+  background: #fff8d8;
+  border-left: 8px solid var(--experiencias-amarelo);
+  padding: 24px;
+  border-radius: 14px;
+  margin: 28px 0;
+  font-size: 22px;
+  line-height: 1.45;
+  font-weight: 700;
+}
+
+.experiencias-detail-footer {
+  max-width: 1180px;
+  margin: 60px auto 0;
+  background: #fff;
+  padding: 30px 0;
+  text-align: center;
+  overflow: hidden;
+  border-top-left-radius: 24px;
+  border-top-right-radius: 24px;
+}
+
+.experiencias-detail-footer-logos {
+  max-width: 70%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.experiencias-detail-floating-back {
+  position: fixed;
+  left: 24px;
+  bottom: 24px;
+  background: var(--experiencias-azul);
+  color: #fff !important;
+  text-decoration: none;
+  padding: 16px 22px;
+  border-radius: 999px;
+  font-weight: 800;
+  box-shadow: 0 8px 20px rgba(0,0,0,.25);
+  z-index: 999;
+  min-height: 60px;
+  font-size: 30px;
+}
+
+.experiencias-detail-btn-top {
+  position: fixed;
+  right: 28px;
+  bottom: 28px;
+  background: var(--experiencias-azul);
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  padding: 14px 18px;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(0,0,0,.25);
+  font-size: 30px;
+}
+
+@media (max-width: 900px) {
+  .experiencias-detail-page {
+    display: block;
+    padding: 28px;
+  }
+
+  .experiencias-detail-nav {
+    position: relative;
+    top: auto;
+    margin-bottom: 28px;
+  }
+
+  .experiencias-detail-content {
+    padding: 32px 26px;
+  }
+
+  .experiencias-detail-topbar-inner {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .experiencias-detail-evento {
+    text-align: left;
+  }
+
+  .experiencias-detail-section p,
+  .experiencias-detail-section li {
+    font-size: 18px;
+  }
+}
+
+
+.experiencias-detail-meta {
+    margin-top: 28px;
+    color: #eef0ff;
+    font-size: 18px;
+    line-height: 1.6;
+    display: block;   /* ou simplesmente remova o display:flex */
+}
+
+.experiencias-detail-meta p {
+    margin: 6px 0;
+}
+
+.experiencias-autor,
+.experiencias-coautor,
+.experiencias-id {
+    margin-bottom: 4px;
+}
+
+.experiencias-detail-meta strong {
+    font-weight: 700;
+}
