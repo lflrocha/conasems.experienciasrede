@@ -15,17 +15,23 @@
 <body>
 
 
-  <header class="experiencias-detail-topbar">
-    <div class="experiencias-detail-topbar-inner">
-      <div class="experiencias-detail-logo">
+  <header class="experiencias-topbar">
+    <div class="experiencias-topbar-inner">
+      <div class="experiencias-logo">
         <img tal:attributes="src string:${view/static_url}/logo.png"
              alt="Logo Rede Colaborativa COSEMS" />
       </div>
 
-      <div class="experiencias-detail-evento">
+      <div class="experiencias-evento">
         Experiências que transformam:<br />
         uma rede em movimento
       </div>
+
+      <div class="experiencias-logo-conasems">
+        <img tal:attributes="src string:${view/static_url}/logo-conasems.png"
+             alt="CONASEMS" />
+      </div>
+
     </div>
   </header>
 

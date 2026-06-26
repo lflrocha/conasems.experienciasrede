@@ -39,9 +39,10 @@ body {
 
 /* TOPO */
 
+
 .experiencias-topbar {
   background: var(--azul);
-  color: white;
+  color: #fff;
   padding: 28px 48px 22px;
   border-bottom: 8px solid var(--amarelo);
   position: sticky;
@@ -52,27 +53,40 @@ body {
 }
 
 .experiencias-topbar-inner {
-  max-width: 1280px;
-  margin: auto;
-  display: flex;
-  justify-content: space-between;
+  width: 100%;
+  max-width: 1360px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 140px minmax(0, 1fr) 140px;
   align-items: center;
   gap: 32px;
 }
 
-.experiencias-logo img {
+.experiencias-logo,
+.experiencias-logo-conasems {
+  width: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.experiencias-logo img,
+.experiencias-logo-conasems img {
   height: 90px;
+  max-width: 140px;
   width: auto;
   display: block;
 }
 
 .experiencias-evento {
-  text-align: right;
+  text-align: center;
   font-weight: 800;
   font-size: 24px;
   text-transform: uppercase;
   line-height: 1.05;
 }
+
 
 /* HERO */
 
@@ -256,7 +270,7 @@ select:focus {
   color: var(--azul-escuro);
   border-radius: 999px;
   padding: 8px 12px;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 800;
   margin-bottom: 14px;
 }
@@ -264,7 +278,7 @@ select:focus {
 .experiencias-card h2 {
   margin: 0 0 16px;
   font-size: 22px;
-  line-height: 1.22;
+  line-height: 1.32;
   letter-spacing: -0.3px;
   color: var(--texto);
 }

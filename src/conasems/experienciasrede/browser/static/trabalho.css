@@ -7,6 +7,16 @@
   --experiencias-texto: #202124;
   --experiencias-texto-suave: #5f6368;
   --experiencias-borda: #e4e6ef;
+
+  --azul: #2828a8;
+  --azul-escuro: #15156f;
+  --amarelo: #f7c600;
+  --branco: #ffffff;
+  --cinza: #f5f6fa;
+  --cinza-2: #eceef6;
+  --texto: #202124;
+  --texto-suave: #60636d;
+  --borda: #e1e4ef;
 }
 
 html {
@@ -16,6 +26,10 @@ html {
 body{
   font-family: Arial, Helvetica, sans-serif;
   margin: 0px;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 .experiencias-detail-topbar,
@@ -29,48 +43,59 @@ body{
   box-sizing: border-box;
 }
 
-.experiencias-detail-topbar {
-  background: var(--experiencias-azul);
+
+/* TOPO */
+
+.experiencias-topbar {
+  background: var(--azul);
   color: #fff;
   padding: 28px 48px 22px;
-  border-bottom: 8px solid var(--experiencias-amarelo);
+  border-bottom: 8px solid var(--amarelo);
   position: sticky;
   top: 0;
   z-index: 9999;
-
   width: 100%;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
-
+  box-shadow: 0 4px 12px rgba(0,0,0,.12);
 }
 
-.experiencias-detail-topbar-inner {
-  max-width: 1180px;
-  margin: auto;
-  display: flex;
-  justify-content: space-between;
+.experiencias-topbar-inner {
+  width: 100%;
+  max-width: 1360px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 140px minmax(0, 1fr) 140px;
   align-items: center;
   gap: 32px;
 }
 
-.experiencias-detail-logo img {
+.experiencias-logo,
+.experiencias-logo-conasems {
+  width: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.experiencias-logo img,
+.experiencias-logo-conasems img {
   height: 90px;
+  max-width: 140px;
   width: auto;
   display: block;
 }
 
-.experiencias-detail-evento {
-  text-align: right;
+.experiencias-evento {
+  text-align: center;
   font-weight: 800;
   font-size: 24px;
   text-transform: uppercase;
   line-height: 1.05;
 }
 
-.experiencias-detail-main {
-  background: var(--experiencias-cinza);
-  color: var(--experiencias-texto);
-  font-family: Arial, Helvetica, sans-serif;
-}
+
+
+
 
 .experiencias-detail-hero {
   background: linear-gradient(135deg, var(--experiencias-azul), var(--experiencias-azul-escuro));

@@ -25,6 +25,12 @@
         Experiências que transformam:<br />
         uma rede em movimento
       </div>
+
+      <div class="experiencias-logo-conasems">
+        <img tal:attributes="src string:${view/static_url}/logo-conasems.png"
+             alt="CONASEMS" />
+      </div>
+
     </div>
   </header>
 
@@ -57,7 +63,7 @@
           <button type="button"
                   class="experiencias-chip"
                   tal:attributes="data-axis axis"
-                  tal:content="axis">Eixo</button>
+                  tal:content="python:axis.split(':')[0] or axis">Eixo</button>
         </tal:axis>
       </div>
     </section>
