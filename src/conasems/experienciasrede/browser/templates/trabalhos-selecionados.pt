@@ -68,12 +68,15 @@
     </div>
 
     <section class="experiencias-grid" id="experienciasCardsGrid">
+
+
       <article class="experiencias-card"
                tal:repeat="item view/trabalhos"
                tal:attributes="data-title item/title;
                                data-author item/author;
                                data-uf item/uf;
                                data-axis item/axis">
+      <a tal:attributes="href item/url">
         <div class="experiencias-card-top">
           <div class="experiencias-uf" tal:content="item/uf">UF</div>
           <div class="experiencias-id" tal:content="item/id">ID 001</div>
@@ -94,6 +97,7 @@
           <a class="experiencias-card-link"
              tal:attributes="href item/url">Ver trabalho</a>
         </div>
+      </a>
       </article>
     </section>
 
