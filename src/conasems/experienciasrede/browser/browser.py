@@ -33,7 +33,7 @@ class TrabalhosSelecionadosView(BrowserView):
         brains = catalog(
             portal_type=self.portal_type,
             path={'query': path, 'depth': 99},
-            sort_on='sortable_title',
+            sort_on='codigo',
         )
 
         items = []

@@ -78,6 +78,7 @@
     <div class="experiencias-detail-page">
       <aside class="experiencias-detail-nav">
         <div class="experiencias-detail-nav-title">Navegue pelo trabalho</div>
+        <a href="#topo">Título</a>
         <a href="#introducao" tal:condition="view/introducao">Introdução</a>
         <a href="#objetivos" tal:condition="view/objetivos">Objetivos</a>
         <a href="#metodologia" tal:condition="view/metodologia">Metodologia</a>
@@ -137,9 +138,9 @@
          class="experiencias-detail-footer-logos" />
   </footer>
 
-  <button type="button" class="experiencias-detail-btn-top" id="experienciasDetailBtnTop">
-    ↑ Topo
-  </button>
+  <!-- <button type="button" class="experiencias-detail-btn-top" id="experienciasDetailBtnTop">
+    ↑
+  </button> -->
 
   <script tal:attributes="src string:${view/static_url}/trabalho.js"></script>
 
